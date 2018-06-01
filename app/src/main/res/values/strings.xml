@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SingleScreenApplication</string>
+    <string name="txtCredits"><a href="https://en.wikipedia.org/wiki/Newport_Centre_(shopping_mall)">Wikipedia</a></string>
+</resources>

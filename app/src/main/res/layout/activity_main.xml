@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.singlescreenapplication.MainActivity" android:scrollY="20dp">
+
+
+    <ImageView
+        android:id="@+id/mall_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerInside"
+        android:layout_below="@id/title_text_view"
+        android:src="@drawable/newport_mall" />
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:gravity="center|top"
+        android:text="Newport Mall"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationdetails"
+        android:layout_below="@id/mall_image_view"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <ImageView
+            android:id="@+id/loc_icon_image_view"
+            android:src="@drawable/map"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/address_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/loc_icon_image_view"
+            android:autoLink="map"
+            android:linksClickable="true"
+            android:text="30 Mall Dr W, Jersey City, NJ 07310"
+            android:textColor="?attr/colorPrimaryDark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contactdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/locationdetails"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/phone_icon_image_view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/locationdetails"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/phone_icon" android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/phone_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/phone_icon_image_view"
+            android:textColor="#303f9f"
+            android:autoLink="phone"
+            android:baselineAligned="false"
+            android:linksClickable="true"
+            android:text="(201)626-2078" />
+    </LinearLayout>
+    <TextView
+        android:layout_below="@id/contactdetails"
+        android:id="@+id/info_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Newport Centre is a shopping mall in Jersey City, New Jersey that opened in 1987. It is a major component of the enormous Newport, Jersey City, mixed-use community on the Hudson River waterfront across from lower Manhattan."/>
+    <TextView
+        android:id="@+id/wiki_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtCredits"
+        android:autoLink="web"
+        android:textColor="#303f9f"
+        android:linksClickable="true"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/info_text_view"/>
+</RelativeLayout>
